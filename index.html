@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/Fonts Icon/themify-icons-font/themify-icons/themify-icons.css">
         <link rel="stylesheet" href="./assets/img/slider/la.jpg">
+        <link rel="stylesheet" href="./assets/css/style_responsive.css">
     </head>
     <body>
         
@@ -45,19 +46,21 @@
             
             <!-- ....................... -->
             <!-- Begin Content -->
-            <div id="content">
+        <div id="content">
                 <!-- The Band -->
                 <!-- Begin slider -->
-            <div id="slider">
-                <div class="text-content">
+                <div id="slider">
+                    <div class="text-content">
                     <img class="style-img" src="assets/img/slider/la.jpg">
+                    
                     <p class="text-slide">New york</p>
                     <p class="text-description">The atmosphere in New York is lorem ipsum.</p>
+                    </div>
+               
                 </div>
-                
-            </div>
             <!-- End slider -->
-                <div id="band" class="content-section">
+                <!-- The Band -->
+                <div id="band" class="content-section" style ="max-width: 800px;">
                     <p class="section-heading">THE BAND</p>
                     <p class="section-sub-heading">We love music</p>
                     <p class="content-info-first">
@@ -88,15 +91,16 @@
                 </div>
                  <!--TOUR DATES -->
                 <div id="tour" class="tour-section">
-                    <div class="content-section">
+                    <div class="content-section" style ="max-width: 800px;">
                         <p class="section-heading text-white">TOUR DATES</p>
                         <p class="section-sub-heading text-white">Remember to book your tickets!</p>
                         <!-- Tickets -->
-                        <div class="tickets-list">
-                            <p>September <span class="Sold-out">Sold out</span></p>
-                            <p>October <span class="Sold-out">Sold out</span></p>
-                            <p>November <span class="leftover">3</span></p>
-                        </div>
+                        <br>
+                        <ul class="tickets-list">
+                                <li class="w3-month">September <span class="Sold-out">Sold out</span></li>
+                                <li class="w3-month">October <span class="Sold-out">Sold out</span></li>
+                                <li class="w3-month">November <span class="leftover">3</span></li>
+                        </ul>
                         <!-- Places -->
                         <div class="places-list">
                             <div class="places-item">
@@ -133,9 +137,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Contact -->
-                <div id="contact" class="contact-section">
-                    <div class="content-section">
+                Contact -->
+                <div id="contact" class="contact-section content-section" style="max-width :800px;">
                         <h3 class="section-heading">CONTACT</h3> 
                         <p class="section-sub-heading">Fan? Drop a note!</p> 
                         <div class="contact-about">
@@ -148,26 +151,37 @@
                                 Email: mail@mail.com
                            
                               </div>
-                            <div class="input-contact">
+                            <div class="w3-from"><from action = "http://github.com/" target="_blank">
+                                <div class="input-contact">
+                                    <div class="input-about">
+                                        <input type="Name" class="input-name w3-input" placeholder="Name">
+                                    </div>
+                                    <div class="input-about">
+                                        <input type="email" class="input-email w3-input" placeholder="Email">
+                                    </div>
+                                </div>
 
-                                <div class="input-about">
-                                    <input type="Name" class="input-name w3-input" placeholder="Name">
-                                </div>
-                                <div class="input-about">
-                                    <input type="email" class="input-email w3-input" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="input-about">
-                                <input type="message" class="input-message w3-input" placeholder="Message">
-                            </div>
-                            <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-                        </div>
-                    </div>
-                       
+                               <input type="message" class=" input-about input-message w3-input" placeholder="Message">
+                                
+                                <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+                            </from>
+                        </div>  
                     </div>
 
                 </div>
+                
             </div>
+            <!-- setup map Button -->
+            <div class="set-map" style="border: 5px solid rgb(216, 53, 53)">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9326423019343!2d105.
+                78377211352108!3d21.03538098599477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13
+                .1!3m3!1m2!1s0x3135ab4a69c94797%3A0xe70979f22e99ed06!2zNTMgUC4gVHLhuqdu
+                IFF14buRYyBWxrDhu6NuZywgROG7i2NoIFbhu41uZyBI4bqtdSwgQ-G6p3UgR2nhuqV5LCBI
+                w6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1666674434180!5m2!1svi!2s" 
+                width="800" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>  
+
+            <!-- Footer -->
             <div class="footer" >
                 <i class="ti-facebook footer-icon"></i>
                 <i class="ti-instagram footer-icon"></i>
@@ -181,7 +195,7 @@
                 </p>
             </div>
             <!-- End footer -->
-
+            
         </div>
          <div class="modal open">
             <div class="modal-container">
@@ -218,7 +232,7 @@
 
             </div>
          </div>
-         <
+         
 
     </body>
 
