@@ -15,54 +15,44 @@
         <div id="main">
             <div id="header">
                 <!-- Begin NAV -->
-                <ul>
-                    <div id="nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#band">Band</a></li>
-                        <li><a href="#tour">Tour</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li>
-                            <a href="#">More
-                                <u1 class="nav-size-down ti-angle-double-down"></u1></u>
-                            </a>
-                            <ul class="subnav">
-                                <li><a href="#"></a>Merchandise</li>
-                                <li><a href="#"></a>Extras</li>
-                                <li><a href="#"></a>Media</li>
-                            </ul>    
-                        </p>
-                    </div> 
+                <div id="nav">
+                    <a class="nav-content home" href="#">Home</a>
+                    <a class="nav-content " href="#band">Band</a>
+                    <a class="nav-content" href="#tour">Tour</a>
+                    <a class="nav-content" href="#contact">Contact</a>
+                    <div class="nav-menu nav-content" href="#">More <i class="nav-size-down ti-angle-double-down"></i>
+                        <ul class="subnav">
+                            <li class="list-items"><a href="#"></a>Merchandise</li>
+                            <li class="list-items"><a href="#"></a>Extras</li>
+                            <li class="list-items"><a href="#"></a>Media</li>
+                            </ul>      
+                    </div>
                    
-                </ul>  
+                    <a class="search-icon ti-search search-btn"></a>
+                    <div class="mobie-menu"><a class=" ti-menu menu-icon "></a></div>
+                </div> 
                  <!-- End NAV--> 
-                <!-- Begin Search Button -->
-                <div class="search-btn">
-                    <b class="search-icon ti-search"></b>
-  
-                </div>
-                <!-- End Search Button -->  
-            
             </div>
             
             <!-- ....................... -->
             <!-- Begin Content -->
-        <div id="content">
+            <div id="content">
                 <!-- The Band -->
                 <!-- Begin slider -->
                 <div id="slider">
                     <div class="text-content">
-                    <img class="style-img" src="assets/img/slider/la.jpg">
-                    
-                    <p class="text-slide">New york</p>
-                    <p class="text-description">The atmosphere in New York is lorem ipsum.</p>
+                        <h3 class="text-slide">New york</h3>
+                        <p class="text-description"><b>he atmosphere in New York is lorem ipsum.</b></p>
                     </div>
                
                 </div>
             <!-- End slider -->
                 <!-- The Band -->
                 <div id="band" class="content-section" style ="max-width: 800px;">
-                    <p class="section-heading">THE BAND</p>
-                    <p class="section-sub-heading">We love music</p>
+                    <h2 class="section-heading">THE BAND</h2>
+                    <p class=" w3-opacity">
+                        <i>We love music</i>
+                    </p>
                     <p class="content-info-first">
                         We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -92,8 +82,11 @@
                  <!--TOUR DATES -->
                 <div id="tour" class="tour-section">
                     <div class="content-section" style ="max-width: 800px;">
-                        <p class="section-heading text-white">TOUR DATES</p>
-                        <p class="section-sub-heading text-white">Remember to book your tickets!</p>
+                        <h2 class="section-heading" style ="color: #fff;">TOUR DATE</h2>
+                        <p class=" w3-opacity"  style ="color: #fff;">
+                            <i>Remember to book your tickets!</i>
+                        </p>
+                       
                         <!-- Tickets -->
                         <br>
                         <ul class="tickets-list">
@@ -137,10 +130,12 @@
                         </div>
                     </div>
                 </div>
-                Contact -->
+                <!-- Contact --> 
                 <div id="contact" class="contact-section content-section" style="max-width :800px;">
-                        <h3 class="section-heading">CONTACT</h3> 
-                        <p class="section-sub-heading">Fan? Drop a note!</p> 
+                    <h2 class="section-heading">CONTACT</h2>
+                    <p class="w3-opacity">
+                        <i>Fan? Drop a note!</i>
+                    </p>
                         <div class="contact-about">
                             <div class="contact-list">
                                 <i class="ti-location-pin contact-icon" ></i>
@@ -151,20 +146,16 @@
                                 Email: mail@mail.com
                            
                               </div>
-                            <div class="w3-from"><from action = "http://github.com/" target="_blank">
+                            <div class="w3-from">
                                 <div class="input-contact">
-                                    <div class="input-about">
-                                        <input type="Name" class="input-name w3-input" placeholder="Name">
+                                    <div class="input-name_email">
+                                        <input type="Name" class="w3-flex-input input-name w3-input" placeholder="Name">
+                                        <input type="email" class=" w3-flex-input input-email w3-input" placeholder="Email">
                                     </div>
-                                    <div class="input-about">
-                                        <input type="email" class="input-email w3-input" placeholder="Email">
-                                    </div>
+                                    <div><input type="message" class="input-message w3-input input-about" placeholder="Message"></div> 
                                 </div>
 
-                               <input type="message" class=" input-about input-message w3-input" placeholder="Message">
-                                
                                 <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-                            </from>
                         </div>  
                     </div>
 
@@ -182,13 +173,14 @@
                 </div>  
 
             <!-- Footer -->
-            <div class="footer" >
-                <i class="ti-facebook footer-icon"></i>
-                <i class="ti-instagram footer-icon"></i>
-                <i class="ti-pinterest footer-icon"></i>
+            <div class="footer" > 
+                
+                <i class="ti-facebook footer-icon"><a href="http://www.facebook.com"></a></i>         
+                <i class="ti-instagram footer-icon"></i>              
+                <i class="ti-pinterest footer-icon"></i>           
                 <i class="ti-skype footer-icon"></i>
-                <i class="ti-twitter-alt footer-icon"></i>
-                <i class="ti-linkedin footer-icon"></i>
+                <i class="ti-twitter-alt footer-icon"> </i>
+                <i class="ti-linkedin footer-icon"> </i>              
                 <p class="footer-medium">
                     Powered by 
                     <a href="https://www.w3schools.com/w3css/default.asp" class="footer-medium">w3.css</a>
