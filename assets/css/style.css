@@ -99,7 +99,7 @@ ul {
     position: relative;
     margin-top: 48px;
     padding-top: 50%;
-    background: url('/assets/img/slider/la.jpg') top center/ cover no-repeat;
+    /* background: url('/assets/img/slider/la.jpg') top center/ cover no-repeat; */
 }
 #slider .text-content {
     bottom: 0;
