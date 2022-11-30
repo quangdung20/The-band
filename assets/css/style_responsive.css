@@ -7,18 +7,52 @@
     .search-btn{
         display: none;
     }
+    #nav .home{
+       width: 30% !important;
+    }
     .nav-content{
         background-color: rgb(0, 0, 0);
-        width: 50% !important;
+        width: 100% ;
     }
-    #header .mobie-menu{
+    #header .mobile-menu{
         display: inline-block !important;
     }
-    #header .mobie-menu:hover  {
+    #header .mobile-menu:hover  {
         color: #000 !important;
         background-color: rgb(215, 215, 215);
     }
-    
+    /* content */
+    #slider .text-content{
+        display: none !important;
+    }
+    .member-list{
+        justify-content: space-evenly;
+    flex-direction: column-reverse;
 
+    }
+    .member-item{
+        margin-top:15px;
+        border-radius: 4px;
+    }
+    .member-img{
+        width: 100%;
+    }
+    .places-list .places-item{
+        float: none;
+        width: 100%;
+        padding-top: 16px;
+    }
+    /* contact */
+    .contact-about .contact-list{
+        width: 100%;
+    }
+    .w3-from{
+        width: 100%;
+        float: none; 
+    }
+    .w3-input{
+        width:100%;
+    }
   
+
 }

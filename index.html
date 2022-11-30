@@ -9,12 +9,12 @@
         <link rel="stylesheet" href="./assets/Fonts Icon/themify-icons-font/themify-icons/themify-icons.css">
         <link rel="stylesheet" href="./assets/img/slider/la.jpg">
         <link rel="stylesheet" href="./assets/css/style_responsive.css">
+        <link rel="stylesheet" href="./main/main.js">
     </head>
     <body>
         
         <div id="main">
             <div id="header">
-                <!-- Begin NAV -->
                 <div id="nav">
                     <a class="nav-content home" href="#">Home</a>
                     <a class="nav-content " href="#band">Band</a>
@@ -27,11 +27,10 @@
                             <li class="list-items"><a href="#"></a>Media</li>
                             </ul>      
                     </div>
-                   
                     <a class="search-icon ti-search search-btn"></a>
-                    <div class="mobie-menu"><a class=" ti-menu menu-icon "></a></div>
+                    <div class="mobile-menu"><a class=" ti-menu"></a></div>
                 </div> 
-                 <!-- End NAV--> 
+                
             </div>
             
             <!-- ....................... -->
@@ -138,12 +137,10 @@
                     </p>
                         <div class="contact-about">
                             <div class="contact-list">
-                                <i class="ti-location-pin contact-icon" ></i>
-                                Chicago, US <br>
-                                <i class="ti-headphone-alt contact-icon"></i>
-                                Phone: +00 151515 <br>
-                                <i class="ti-email contact-icon"></i>
-                                Email: mail@mail.com
+                                <p class="ti-location-pin contact-icon" > Chicago, US</p>
+                                <p class="ti-headphone-alt contact-icon"> Phone: +00 151515</p>
+                                <p class="ti-email contact-icon"> Email: mail@mail.com</p>
+                               
                            
                               </div>
                             <div class="w3-from">
@@ -164,12 +161,12 @@
             </div>
             <!-- setup map Button -->
             <div class="set-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9326423019343!2d105.
+                <iframe class = "w3-set-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9326423019343!2d105.
                 78377211352108!3d21.03538098599477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13
                 .1!3m3!1m2!1s0x3135ab4a69c94797%3A0xe70979f22e99ed06!2zNTMgUC4gVHLhuqdu
                 IFF14buRYyBWxrDhu6NuZywgROG7i2NoIFbhu41uZyBI4bqtdSwgQ-G6p3UgR2nhuqV5LCBI
                 w6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1666674434180!5m2!1svi!2s" 
-                width="800" height="450" style ="border: 5px solid rgb(142, 222, 231);"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                width="90%" height="auto" style ="border: 5px solid rgb(142, 222, 231);"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>  
 
             <!-- Footer -->
@@ -224,8 +221,22 @@
 
             </div>
          </div>
-         
-
+         <!-- <script>
+            var header = document.getElementById('header');
+            var mobileMenu = document.getElementsByClassName('mobile-menu');
+            console.log(header);
+            header.onclick = function(){
+                // var isClosed = header.clientHeight === 48;
+                // if(isClosed) {
+                //     header.style.height = 'auto';
+                // } 
+                // else{
+                //     header.style.height = '48px';
+                // }
+                // console.log(header.clientHeight);
+            }
+         </script> -->
+        
     </body>
 
 </html>

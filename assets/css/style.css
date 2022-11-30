@@ -10,7 +10,7 @@
 4. Kiểu dáng ( kiểu chữ, hình dáng...)*/
 html {
     scroll-behavior: smooth !important;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana,sans-serif;
 }
 #main{
     overflow: hidden;
@@ -28,9 +28,8 @@ html {
     right: 0;
     height: 48px;
     background-color: rgb(0, 0, 0);
-    font-weight: 500;
     z-index: 1;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 ul {
@@ -71,24 +70,25 @@ ul {
 #nav .nav-size-down{
     font-size: 12px;
 } 
-.search-btn, .mobie-menu{
+.search-btn, .mobile-menu{
     float: right  !important;
     padding: 0 24px;
     cursor: pointer;
 }  
 
 #header .search-btn:hover{
+    cursor: pointer; 
     color:rgb(255, 252, 252);
     background-color: #f44336!important;
 }
-#header .search-icon, .mobie-menu{
+#header .search-icon, .mobile-menu{
     color:rgb(255, 255, 255);
     font-size: 20px;
     font-weight: 800;
     line-height:48px;
 }
 /* menu icon */
-#header .mobie-menu{
+#header .mobile-menu{
     position: absolute;
     top: 0;
     right: 0;
@@ -150,13 +150,15 @@ ul {
 }
 .member-list{
     margin-top: 48px;
-    /* overflow: hidden; */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    
 }
 .member-item{
-    float: left;
-    /* background-size: 120px; */
-    width: 33.33333333%; 
-    text-align: center;
+    display: inline-block;
+    margin:auto;
+    
 }
 .member-name{
     font-size: 15px;
@@ -185,10 +187,10 @@ ul {
     color:rgb(117, 117, 117);
     max-width:  100%;
 } 
-.tickets-list > li{
+/* .tickets-list > li{
     display: list-item;
 
-}
+} */
 
  .Sold-out{
     color: #fff!important;
@@ -259,28 +261,27 @@ ul {
     padding: 32px 0 !important;
 }
 .contact-list{ 
-    width: 49.9999% !important;
-        line-height: 1.6;
+    width: 49.9999%;
+    line-height: 1.6;
     font-size: 18px;
     display: inline-block;
     margin-bottom: 16px!important;
 }
-
-.contact-icon {
-    margin-right: 12px;
+[class^="ti-"], [class*=" ti-"] {
+    font-family: 'themify';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1.6 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-
-
-/*  */
 .w3-from{
     width: 50%;
     float: right;
 }
 
-/* .input-contact {  
-    padding: 0 8px;
-    margin: 0 -16px 8px -16px;
-}*/
 .input-about{
     width: 100%; 
     display: inline-block !important;
@@ -367,7 +368,7 @@ ul {
     align-items: center;
     justify-content: center;
     /* color: rgb(243, 82, 82)!important; */
-    background-color: #8ab6f7!important;
+    background-image:linear-gradient( to right, rgb(9, 222, 52), rgb(72, 232, 232));;
     text-align: center;
 }
 .footer-icon {
