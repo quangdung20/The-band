@@ -1,23 +1,25 @@
 /* mobie : width <740px */
 @media only screen and (max-width: 750px) {
-
+    /* #header{
+         overflow: hidden;
+    } */
     #nav .nav-content{
-      display: inline-block !important;
+      display: none;
+      background-color: rgb(0, 0, 0);
+      width: 100% ;
     }
     .search-btn{
         display: none;
     }
     #nav .home{
        width: 30% !important;
+       display: inline-block !important;
     }
-    .nav-content{
-        background-color: rgb(0, 0, 0);
-        width: 100% ;
-    }
-    #header .mobile-menu{
+   
+    #header #mobile-menu{
         display: inline-block !important;
     }
-    #header .mobile-menu:hover  {
+    #header #mobile-menu:hover  {
         color: #000 !important;
         background-color: rgb(215, 215, 215);
     }

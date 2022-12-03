@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./assets/Fonts Icon/themify-icons-font/themify-icons/themify-icons.css">
         <link rel="stylesheet" href="./assets/img/slider/la.jpg">
         <link rel="stylesheet" href="./assets/css/style_responsive.css">
-        <link rel="stylesheet" href="./main/main.js">
+        <!-- <link rel="stylesheet" href="./main/header.js"> -->
     </head>
     <body>
         
@@ -28,7 +28,7 @@
                             </ul>      
                     </div>
                     <a class="search-icon ti-search search-btn"></a>
-                    <div class="mobile-menu"><a class=" ti-menu"></a></div>
+                    <div id="mobile-menu"><a class=" ti-menu"></a></div>
                 </div> 
                 
             </div>
@@ -166,7 +166,7 @@
                 .1!3m3!1m2!1s0x3135ab4a69c94797%3A0xe70979f22e99ed06!2zNTMgUC4gVHLhuqdu
                 IFF14buRYyBWxrDhu6NuZywgROG7i2NoIFbhu41uZyBI4bqtdSwgQ-G6p3UgR2nhuqV5LCBI
                 w6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1666674434180!5m2!1svi!2s" 
-                width="90%"height="200px" style ="border: 5px solid rgb(142, 222, 231);"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                width="90%"; height="200px" style ="border: 5px solid rgb(142, 222, 231);"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>  
 
             <!-- Footer -->
@@ -221,21 +221,26 @@
 
             </div>
          </div>
-         <!-- <script>
-            var header = document.getElementById('header');
-            var mobileMenu = document.getElementsByClassName('mobile-menu');
-            console.log(header);
-            header.onclick = function(){
-                // var isClosed = header.clientHeight === 48;
-                // if(isClosed) {
-                //     header.style.height = 'auto';
-                // } 
-                // else{
-                //     header.style.height = '48px';
-                // }
-                // console.log(header.clientHeight);
-            }
-         </script> -->
+         <script>
+                var NavContent = document.querySelectorAll('#nav .nav-content');
+                var MbMenu = document.querySelector('#mobile-menu');
+                var NavLength = NavContent.length;
+                MbMenu.onclick = function(){
+                    for(var i=0; i < NavLength; i++){
+                            NavContent[i].style.display = 'inline-block'; 
+                    }
+                }
+                for(var i=0; i < NavLength; i++){
+                    var NavC = NavContent[i];
+                    NavC.onclick = function(){
+
+                        for(var j=0; j < NavLength; j++){
+                            NavContent[j].style.display = 'none'; 
+                         }
+                    }
+                 }
+                
+         </script>
         
     </body>
 

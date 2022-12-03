@@ -29,7 +29,7 @@ html {
     height: 48px;
     background-color: rgb(0, 0, 0);
     z-index: 1;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 ul {
@@ -70,7 +70,7 @@ ul {
 #nav .nav-size-down{
     font-size: 12px;
 } 
-.search-btn, .mobile-menu{
+.search-btn, #mobile-menu{
     float: right  !important;
     padding: 0 24px;
     cursor: pointer;
@@ -81,14 +81,14 @@ ul {
     color:rgb(255, 252, 252);
     background-color: #f44336!important;
 }
-#header .search-icon, .mobile-menu{
+#header .search-icon, #mobile-menu{
     color:rgb(255, 255, 255);
     font-size: 20px;
     font-weight: 800;
     line-height:48px;
 }
 /* menu icon */
-#header .mobile-menu{
+#header #mobile-menu{
     position: absolute;
     top: 0;
     right: 0;
@@ -267,15 +267,9 @@ ul {
     display: inline-block;
     margin-bottom: 16px!important;
 }
-[class^="ti-"], [class*=" ti-"] {
-    font-family: 'themify';
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
+
+.contact-icon{
     line-height: 1.6 !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 .w3-from{
     width: 50%;
