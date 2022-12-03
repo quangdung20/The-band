@@ -1,16 +1,33 @@
 
-// var Nav = document.getElementById('nav');
-// var mobileMenu = document.getElementsByClassName('mobile-menu');
+var Nav = document.querySelector('#nav');
+var NavContent = document.querySelectorAll('#nav .nav-content');
+var MbMenu = document.querySelector('#mobile-menu');
+var ListMore = document.querySelectorAll('.list-items');
+var NavLength = NavContent.length;
 
-// mobileMenu.onclick = function(){
-//     console.log(Nav.clientHeight);
-    // var isClosed = header.clientHeight=== 48 ;
-    // if(isClosed) {
-    //     header.style.height = 'auto';
-    // } 
-    // else{
-    //     header.style.height = '48px';
+console.log(Nav.clientWidth);
+if(Nav.clientWidth < '750'){
 
-    // }
-    // console.log(header.clientHeight);
-// }
+    MbMenu.onclick = function(){
+        if(Nav.clientHeight == '48'){
+            for(var i=0; i < NavLength; i++){
+                NavContent[i].style.display = 'inline-block'; 
+             }
+        }
+        else if(Nav.clientHeight != '48'){
+            for(var i=0; i < NavLength; i++){
+                NavContent[i].style.display = 'none !important'; 
+             }
+        }
+
+    }
+        for(var i=0; i < NavLength; i++){
+            var NavC = NavContent[i];
+            NavC.onclick = function(){
+                for(var j=0; j < NavLength; j++){
+                    NavContent[j].style.display = 'none'; 
+                }
+                
+            }
+        }
+}

@@ -28,7 +28,7 @@
                             </ul>      
                     </div>
                     <a class="search-icon ti-search search-btn"></a>
-                    <div id="mobile-menu"><a class=" ti-menu"></a></div>
+                    <div id="mobile-menu" ><a class=" ti-menu"></a></div>
                 </div> 
                 
             </div>
@@ -221,25 +221,36 @@
 
             </div>
          </div>
-         <script>
-                var NavContent = document.querySelectorAll('#nav .nav-content');
-                var MbMenu = document.querySelector('#mobile-menu');
-                var NavLength = NavContent.length;
-                MbMenu.onclick = function(){
-                    for(var i=0; i < NavLength; i++){
-                            NavContent[i].style.display = 'inline-block'; 
-                    }
-                }
-                for(var i=0; i < NavLength; i++){
-                    var NavC = NavContent[i];
-                    NavC.onclick = function(){
+         <script type="text/javascript">
+            var Nav = document.querySelector('#nav');
+            var NavContent = document.querySelectorAll('#nav .nav-content');
+            var MbMenu = document.querySelector('#mobile-menu');
+            var ListMore = document.querySelectorAll('.list-items');
+            var NavLength = NavContent.length;
 
-                        for(var j=0; j < NavLength; j++){
-                            NavContent[j].style.display = 'none'; 
-                         }
-                    }
-                 }
+            console.log(Nav.clientWidth);
+            if(Nav.clientWidth < '750'){
                 
+                MbMenu.onclick = function(){
+                    if(Nav.clientHeight == '48'){
+                        for(var i=0; i < NavLength; i++){
+                            NavContent[i].style.display = 'inline-block'; 
+                        }
+                    }
+                   
+
+                }
+                    for(var i=0; i < NavLength; i++){
+                        var NavC = NavContent[i];
+                        NavC.onclick = function(){
+                            for(var j=0; j < NavLength; j++){
+                                NavContent[j].style.display = 'none'; 
+                            }
+                            
+                        }
+                    }
+            }
+
          </script>
         
     </body>
