@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <title>The band</title>
 <link rel="icon" href="http://abctech.vn/wp-content/uploads/2017/06/logo-nen-xanh.jpg" type="image/x-icon" />
-<html lang="en">
+<html lang="en-Us">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/Fonts Icon/themify-icons-font/themify-icons/themify-icons.css">
         <link rel="stylesheet" href="./assets/img/slider/la.jpg">
         <link rel="stylesheet" href="./assets/css/style_responsive.css">
-        <!-- <link rel="stylesheet" href="./main/header.js"> -->
+        <script src ="javascript/header.js" places ></script>
     </head>
     <body>
-        
         <div id="main">
             <div id="header">
                 <div id="nav">
@@ -229,28 +229,33 @@
             var NavLength = NavContent.length;
 
             console.log(Nav.clientWidth);
-            if(Nav.clientWidth < '750'){
-                
-                MbMenu.onclick = function(){
-                    if(Nav.clientHeight == '48'){
-                        for(var i=0; i < NavLength; i++){
-                            NavContent[i].style.display = 'inline-block'; 
-                        }
-                    }
-                   
 
-                }
+            MbMenu.onclick = function(){
+                if(Nav.clientHeight == '48'){
                     for(var i=0; i < NavLength; i++){
-                        var NavC = NavContent[i];
-                        NavC.onclick = function(){
-                            for(var j=0; j < NavLength; j++){
-                                NavContent[j].style.display = 'none'; 
-                            }
-                            
+                        NavContent[i].style.display = 'inline-block'; 
                         }
                     }
+                    
+                else {
+                    for(var i=0; i < NavLength; i++){
+                        NavContent[i].style.display = ''; 
+                    }
+                }
             }
-
+          
+            for(var i=0; i < NavLength; i++){
+                 var NavC = NavContent[i];
+                 NavC.onclick = function(){
+                    var NavWidth = Nav.clientWidth;
+                    if(NavWidth < '750'){
+                        for(var j=0; j < NavLength; j++){
+                            NavContent[j].style.display = 'none'; 
+                        }
+                    }
+                     
+                }
+            }
          </script>
         
     </body>
