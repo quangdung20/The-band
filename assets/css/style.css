@@ -1,4 +1,10 @@
-  *{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+ 
+ *{
       padding: 0;
       margin: 0;
       box-sizing: border-box;
@@ -98,23 +104,62 @@ ul {
 #slider  {
     position: relative;
     margin-top: 48px;
-    padding-top: 50%;
+    /* padding-top: 50%; */
 }
-#slider .text-content {
-    bottom: 0;
-    color :rgb(223, 223, 223);
-    text-align: center;
-    flex: center;
-    padding: 32px 0;
 
+/* .slider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 48px 0;
+    display: flex;
+    justify-content: center;
 }
-#slider .text-slide{
-    margin : 10px 0;
-    font-size: 24px;
+.slider .slider-left{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
-#slider .text-description{
-    margin: 15px 0;
+.slider-left-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 2s;
 }
+.slider .slider-left .slider-left-top{
+    width: 100%;
+    height: 430px;
+    position: relative;
+    transition: all 2s;
+}
+.slider .slider-left .slider-left-top img{
+    width: 784px;
+    height: 430px;
+    position: absolute;     
+}
+.slider .slider-left .slider-left-top a:nth-child(2) img{
+    transform: translateX(100%);
+}
+.slider .slider-left .slider-left-top a:nth-child(3) img{
+    transform: translateX(200%);
+}
+
+.slider-left .slider-left-top-btn {
+    position: absolute;
+    z-index: 10000;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.slide-img{
+    width: 100%;
+}
+/*begin slide  */
+
+ */
 
 #content{
     max-width: 2000px;
@@ -473,4 +518,8 @@ header.modal-header {
     color: #2196F3!important;
 }
 
+/* slide */
 
+.owl-carousel {
+    z-index: 0;
+}

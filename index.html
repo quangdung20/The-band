@@ -6,11 +6,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/Fonts Icon/themify-icons-font/themify-icons/themify-icons.css">
-        <link rel="stylesheet" href="./assets/img/slider/la.jpg">
         <link rel="stylesheet" href="./assets/css/style_responsive.css">
-        <script src ="javascript/header.js" places ></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src ="javascript/header.js" defer ></script>
     </head>
     <body>
         <div id="main">
@@ -38,12 +40,15 @@
             <div id="content">
                 <!-- The Band -->
                 <!-- Begin slider -->
-                <div id="slider" style="background: url(./assets/img/slider/chicago.jpg)  top center/ cover no-repeat;">
-                    <div class="text-content">
-                        <h3 class="text-slide">New york</h3>
-                        <p class="text-description"><b>The atmosphere in New York is lorem ipsum.</b></p>
+                
+                <div id="slider">
+                    <div class="owl-carousel owl-theme">
+                        <!-- <img class="owl-lazy" data-src="assets/img/slider/slide (1).jpg" >
+                        <img class="owl-lazy" data-src="assets/img/slider/slide (2).jpg"> -->
+                        <img class="owl-lazy" data-src="assets/img/slider/slide (2).jpg" alt="">
+                        <img class="owl-lazy" data-src="assets/img/slider/slide (1).jpg" alt="">
+                        <img class="owl-lazy" data-src="assets/img/slider/slide (3).jpg" alt="">
                     </div>
-               
                 </div>
             <!-- End slider -->
                 <!-- The Band -->
@@ -221,43 +226,17 @@
 
             </div>
          </div>
-         <script type="text/javascript">
-            var Nav = document.querySelector('#nav');
-            var NavContent = document.querySelectorAll('#nav .nav-content');
-            var MbMenu = document.querySelector('#mobile-menu');
-            var ListMore = document.querySelectorAll('.list-items');
-            var NavLength = NavContent.length;
-
-            console.log(Nav.clientWidth);
-
-            MbMenu.onclick = function(){
-                if(Nav.clientHeight == '48'){
-                    for(var i=0; i < NavLength; i++){
-                        NavContent[i].style.display = 'inline-block'; 
-                        }
-                    }
-                    
-                else {
-                    for(var i=0; i < NavLength; i++){
-                        NavContent[i].style.display = ''; 
-                    }
-                }
-            }
-          
-            for(var i=0; i < NavLength; i++){
-                 var NavC = NavContent[i];
-                 NavC.onclick = function(){
-                    var NavWidth = Nav.clientWidth;
-                    if(NavWidth < '750'){
-                        for(var j=0; j < NavLength; j++){
-                            NavContent[j].style.display = 'none'; 
-                        }
-                    }
-                     
-                }
-            }
-         </script>
-        
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="jquery.min.js"></script>
+        <script src="javascript/owl.carousel.min.js"></script>
+        <script>
+            $('.owl-carousel').owlCarousel({
+            items:1,
+            lazyLoad:true,
+            loop:true,
+            margin: 0 
+            });
+        </script>
     </body>
 
 </html>
