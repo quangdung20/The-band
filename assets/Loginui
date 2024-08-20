@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Table Example</title>
+</head>
+<body>
+    <table id="dataTable" border="1">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dữ liệu sẽ được thêm vào đây -->
+        </tbody>
+    </table>
+    <button id="deleteButton">Delete Selected</button>
+
+    <script>
+        const data = [
+            { id: 1, name: "John Doe", age: 30 },
+            { id: 2, name: "Jane Smith", age: 25 },
+            { id: 3, name: "David Johnson", age: 35 }
+        ];
+
+        const tbody = document.querySelector('#dataTable tbody');
+
+        // Hàm thêm hàng vào bảng
+        function loadTableData(data) {
+            data.forEach(item => {
+                const row = document.createElement('tr');
+
+                // Thêm ô checkbox
+                const checkboxCell = document.createElement('td');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = item.id;
+                checkboxCell.appendChild(checkbox);
+                row.appendChild(checkboxCell);
+
+                // Thêm các ô dữ liệu khác
+                Object.values(item).forEach(text => {
+                    const cell = document.createElement('td');
+                    const cellText = document.createTextNode(text);
+                    cell.appendChild(cellText);
+                    row.appendChild(cell);
+                });
+
+                tbody.appendChild(row);
+            });
+        }
+
+        // Hàm xoá các hàng được chọn
+        function deleteSelectedRows() {
+            const checkboxes = document.querySelectorAll('#dataTable tbody input[type="checkbox"]:checked');
+            checkboxes.forEach(checkbox => {
+                const row = checkbox.parentElement.parentElement;
+                tbody.removeChild(row);
+            });
+        }
+
+        // Gọi hàm để load dữ liệu vào bảng
+        loadTableData(data);
+
+        // Gán sự kiện click cho nút xoá
+        document.getElementById('deleteButton').addEventListener('click', deleteSelectedRows);
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-title">
+                <button id="loginBtn">Login</button>
+                <button id="registerBtn">Register</button>
+            </div>
+            <form id="loginForm" class="form active">
+                <h2>Login</h2>
+                <input type="text" id="loginUsername" placeholder="Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="button" onclick="login()">Login</button>
+            </form>
+            <form id="registerForm" class="form">
+                <h2>Register</h2>
+                <input type="text" id="registerUsername" placeholder="Username" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <button type="button" onclick="register()">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    width: 100%;
+    text-align: center;
+}
+
+.form-title {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.form-title button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-title button.active {
+    background-color: #4285F4;
+    color: white;
+}
+
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #4285F4;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+document.getElementById('loginBtn').addEventListener('click', function() {
+    document.getElementById('loginForm').classList.add('active');
+    document.getElementById('registerForm').classList.remove('active');
+    this.classList.add('active');
+    document.getElementById('registerBtn').classList.remove('active');
+});
+
+document.getElementById('registerBtn').addEventListener('click', function() {
+    document.getElementById('registerForm').classList.add('active');
+    document.getElementById('loginForm').classList.remove('active');
+    this.classList.add('active');
+    document.getElementById('loginBtn').classList.remove('active');
+});
+
+function login() {
+    var username = document.getElementById('loginUsername').value;
+    var password = document.getElementById('loginPassword').value;
+
+    // Code kiểm tra đăng nhập
+    if (username === "admin" && password === "password") {
+        alert("Login successful!");
+    } else {
+        alert("Invalid username or password.");
+    }
+}
+
+function register() {
+    var username = document.getElementById('registerUsername').value;
+    var password = document.getElementById('registerPassword').value;
+
+    // Code kiểm tra đăng ký (ví dụ đơn giản, không lưu trữ dữ liệu)
+    if (username && password) {
+        alert("Registration successful!");
+    } else {
+        alert("Please fill in all fields.");
+    }
+}
+
+
